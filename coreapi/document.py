@@ -46,8 +46,8 @@ def _key_sorting(item):
 
 # NOTE: 'type', 'description' and 'example' are now deprecated,
 #       in favor of 'schema'.
-Field = namedtuple('Field', ['name', 'required', 'location', 'schema', 'description', 'type', 'example'])
-Field.__new__.__defaults__ = (False, '', None, None, None, None)
+Field = namedtuple('Field', ['name', 'required', 'location', 'schema', 'description', 'type', 'example', 'allowMultiple'])
+Field.__new__.__defaults__ = (False, '', None, None, None, None, False)
 
 
 # The Core API primitives:
